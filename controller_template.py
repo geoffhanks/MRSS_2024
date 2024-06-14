@@ -740,7 +740,10 @@ class Planner:
         
         p, x, y, theta = self.get_potential(x, y)
 
+
+        # was getting 
         p = 1 if p > 1 else p
+        p = -1 if p < -1 else p
         return p, theta
         
     def new_obstacle(self, ox, oy):
